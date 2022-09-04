@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/simpleyt/static/css/main.6fa0c11c.css",
-    "main.js": "/simpleyt/static/js/main.16f2d006.js",
+    "main.js": "/simpleyt/static/js/main.9c92dda2.js",
     "index.html": "/simpleyt/index.html",
     "main.6fa0c11c.css.map": "/simpleyt/static/css/main.6fa0c11c.css.map",
-    "main.16f2d006.js.map": "/simpleyt/static/js/main.16f2d006.js.map"
+    "main.9c92dda2.js.map": "/simpleyt/static/js/main.9c92dda2.js.map"
   },
   "entrypoints": [
     "static/css/main.6fa0c11c.css",
-    "static/js/main.16f2d006.js"
+    "static/js/main.9c92dda2.js"
   ]
 }
