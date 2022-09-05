@@ -39,7 +39,7 @@ class App extends React.Component {
       <>
         <header className="header">
           <div className="header__logo-box">
-            <a href="/" alt="logo" className="header__logo">
+            <a href="/simpleyt" alt="logo" className="header__logo">
               SimpleYT
             </a>
           </div>
@@ -50,7 +50,6 @@ class App extends React.Component {
             <img src={avatar} alt="avatar" />
           </figure>
         </header>
-
         <main>
           {/* body */}
           <section className="section-video">
