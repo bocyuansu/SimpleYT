@@ -4,12 +4,14 @@ import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 
+import avatar from '../img/cyuan.jpeg';
+
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
-  componentDidMount() {
-    this.onTermSubmit('林俊傑');
-  }
+  // componentDidMount() {
+  //   this.onTermSubmit('林俊傑');
+  // }
 
   onTermSubmit = async (term) => {
     const response = await youtube.get('/search', {
@@ -30,22 +32,38 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
-        <SearchBar onTermSubmit={this.onTermSubmit} />
-        <div className="ui grid">
-          <div className="ui row">
-            <div className="eleven wide column">
+      <>
+        <header className="header">
+          <div className="header__logo-box">
+            <a href="/" alt="logo" className="header__logo">
+              SimpleYT
+            </a>
+          </div>
+          <div className="header__searchBar">
+            <SearchBar onTermSubmit={this.onTermSubmit} />
+          </div>
+          <figure className="header__avatar">
+            <img src={avatar} alt="avatar" />
+          </figure>
+        </header>
+
+        <main>
+          {/* body */}
+          <section className="video">
+            <div className="">
               <VideoDetail video={this.state.selectedVideo} />
             </div>
-            <div className="five wide column">
+            <div className="">
               <VideoList
                 onVideoSelect={this.onVideoSelect}
                 videos={this.state.videos}
               />
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
+          {/* body */}
+        </main>
+        <footer>Footer</footer>
+      </>
     );
   }
 }

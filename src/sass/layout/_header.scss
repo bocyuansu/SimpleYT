@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+
+
+  &__logo {
+    display: inline-block;
+    background-image: linear-gradient(to right bottom, #f77f00, #d62828);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  &__searchBar {
+    width: 30%;
+    margin-right: 20rem;
+  }
+
+  &__avatar {
+    width: 6rem;
+    height: 6rem;
+    
+    img {
+      vertical-align: middle;
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+}

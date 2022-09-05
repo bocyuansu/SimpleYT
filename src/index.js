@@ -1,3 +1,5 @@
+import './css/icon-font.css';
+import './main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';

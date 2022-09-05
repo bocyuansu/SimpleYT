@@ -1,0 +1,35 @@
+.searchBar{
+  position: relative;
+  text-align: center;
+
+  &__icon {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    display: none;
+  }
+  
+  &__input {
+    border: 1px solid #ccc;
+    border-radius: 50rem;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(#000, .1);
+    }
+
+    &::-webkit-input-placeholder {
+      color: #999;
+    }
+  }
+
+  &__input:focus + &__icon {
+    display: inline-block;
+  }
+
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import Spinner from './Spinner';
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;

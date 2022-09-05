@@ -14,18 +14,18 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="field">
-            <label>Video Search</label>
-            <input
-              type="text"
-              value={this.state.term}
-              onChange={this.onInputChange}
-            />
-          </div>
-        </form>
-      </div>
+      <form onSubmit={this.onFormSubmit}>
+        <div className="searchBar">
+          <input
+            className="searchBar__input"
+            placeholder="Search"
+            type="text"
+            value={this.state.term}
+            onChange={this.onInputChange}
+          />
+          <i className="searchBar__icon icon-basic-magnifier"></i>
+        </div>
+      </form>
     );
   }
 }
