@@ -49,20 +49,26 @@ class App extends React.Component {
 
         <main>
           {/* body */}
-          <section className="video">
-            <div className="">
-              <VideoDetail video={this.state.selectedVideo} />
-            </div>
-            <div className="">
-              <VideoList
-                onVideoSelect={this.onVideoSelect}
-                videos={this.state.videos}
-              />
+          <section className="section-video">
+            <div className="row video">
+              <div className="col-2-of-3">
+                <VideoDetail video={this.state.selectedVideo} />
+              </div>
+              <div className="col-1-of-3">
+                <VideoList
+                  onVideoSelect={this.onVideoSelect}
+                  videos={this.state.videos}
+                />
+              </div>
             </div>
           </section>
           {/* body */}
         </main>
-        <footer>Footer</footer>
+        <footer className="footer">
+          <div className="row">
+            <p class="footer__copyright">&copy; Build by Cyuan 2022</p>
+          </div>
+        </footer>
       </>
     );
   }

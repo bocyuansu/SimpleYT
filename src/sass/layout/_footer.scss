@@ -1,0 +1,12 @@
+.footer {
+  height: 8rem;
+  padding: 1rem;
+  font-size: $default-font-size;
+  background-color: #777;
+
+  &__copyright {
+    padding: 2rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}

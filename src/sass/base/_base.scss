@@ -9,6 +9,14 @@
 html {
   // This defines what 1rem is (1rem = 10px)
   font-size: 62.5%;
+
+  @include respond(tab-land) { // width <= 1200
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(tab-port) { // width <= 900
+    font-size: 50%; // 1rem = 8px
+  }  
 }
 
 body {

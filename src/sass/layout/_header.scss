@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
-
+  height: 8rem;
 
   &__logo {
     display: inline-block;
@@ -19,7 +19,14 @@
 
   &__searchBar {
     width: 30%;
-    margin-right: 20rem;
+
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      width: 45%;
+    }
   }
 
   &__avatar {
