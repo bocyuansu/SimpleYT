@@ -13,6 +13,10 @@ class App extends React.Component {
     this.onTermSubmit('林俊傑');
   }
 
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   onTermSubmit = async (term) => {
     const response = await youtube.get('/search', {
       params: {
