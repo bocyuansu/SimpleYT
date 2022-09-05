@@ -9,9 +9,9 @@ import avatar from '../img/cyuan.jpeg';
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
-  // componentDidMount() {
-  //   this.onTermSubmit('林俊傑');
-  // }
+  componentDidMount() {
+    this.onTermSubmit('林俊傑');
+  }
 
   onTermSubmit = async (term) => {
     const response = await youtube.get('/search', {
