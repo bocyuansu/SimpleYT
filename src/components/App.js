@@ -1,80 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
-import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
-
+import useVideos from '../hooks/useVideos';
 import avatar from '../img/cyuan.jpeg';
 
-class App extends React.Component {
-  state = { videos: [], selectedVideo: null };
+const App = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const { videos, search } = useVideos('林俊傑');
 
-  componentDidMount() {
-    this.onTermSubmit('林俊傑');
-  }
+  // 搜尋完，自動選擇第一個視頻
+  useEffect(() => {
+    setSelectedVideo(videos[0]);
+  }, [videos]);
 
-  componentDidUpdate() {
-    window.scrollTo(0, 0);
-  }
+  // 選擇視頻，回到視窗最上方
+  useEffect(() => {
+    if (window.scrollY !== 0) {
+      window.scrollTo(0, 0);
+    }
+  }, [selectedVideo]);
 
-  onTermSubmit = async (term) => {
-    const response = await youtube.get('/search', {
-      params: {
-        q: term,
-      },
-    });
-
-    this.setState({
-      videos: response.data.items,
-      selectedVideo: response.data.items[0],
-    });
-  };
-
-  onVideoSelect = (video) => {
-    this.setState({ selectedVideo: video });
-  };
-
-  render() {
-    return (
-      <>
-        <header className="header">
-          <div className="header__logo-box">
-            <a href="/simpleyt" alt="logo" className="header__logo">
-              SimpleYT
-            </a>
-          </div>
-          <div className="header__searchBar">
-            <SearchBar onTermSubmit={this.onTermSubmit} />
-          </div>
-          <figure className="header__avatar">
-            <img src={avatar} alt="avatar" />
-          </figure>
-        </header>
-        <main>
-          {/* body */}
-          <section className="section-video">
-            <div className="row video">
-              <div className="col-2-of-3">
-                <VideoDetail video={this.state.selectedVideo} />
-              </div>
-              <div className="col-1-of-3">
-                <VideoList
-                  onVideoSelect={this.onVideoSelect}
-                  videos={this.state.videos}
-                />
-              </div>
+  return (
+    <>
+      <header className="header">
+        <div className="header__logo-box">
+          <a href="/simpleyt" alt="logo" className="header__logo">
+            SimpleYT
+          </a>
+        </div>
+        <div className="header__searchBar">
+          <SearchBar onTermSubmit={search} />
+        </div>
+        <figure className="header__avatar">
+          <img src={avatar} alt="avatar" />
+        </figure>
+      </header>
+      <main>
+        {/* body */}
+        <section className="section-video">
+          <div className="row video">
+            <div className="col-2-of-3">
+              <VideoDetail video={selectedVideo} />
             </div>
-          </section>
-          {/* body */}
-        </main>
-        <footer className="footer">
-          <div className="row">
-            <p class="footer__copyright">&copy; Build by Cyuan 2022</p>
+            <div className="col-1-of-3">
+              <VideoList onVideoSelect={setSelectedVideo} videos={videos} />
+            </div>
           </div>
-        </footer>
-      </>
-    );
-  }
-}
+        </section>
+        {/* body */}
+      </main>
+      <footer className="footer">
+        <div className="row">
+          <p className="footer__copyright">&copy; Build by Cyuan 2022</p>
+        </div>
+      </footer>
+    </>
+  );
+};
 
 export default App;
