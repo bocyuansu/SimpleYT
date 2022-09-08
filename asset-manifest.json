@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/simpleyt/static/css/main.f91038b4.css",
-    "main.js": "/simpleyt/static/js/main.17f384f0.js",
+    "main.css": "/simpleyt/static/css/main.0cf152f9.css",
+    "main.js": "/simpleyt/static/js/main.c04d2cff.js",
     "static/media/cyuan.jpeg": "/simpleyt/static/media/cyuan.f1943b5c4e78455804ab.jpeg",
     "static/media/linea-basic-10.svg": "/simpleyt/static/media/linea-basic-10.a5a02e7fc44d05c1fa87.svg",
     "static/media/linea-basic-10.eot": "/simpleyt/static/media/linea-basic-10.83fbe2710ec1d18f00b1.eot",
     "static/media/linea-basic-10.ttf": "/simpleyt/static/media/linea-basic-10.172006d6a70ece2b1a0c.ttf",
     "static/media/linea-basic-10.woff": "/simpleyt/static/media/linea-basic-10.5665793dc15cc2dca6db.woff",
     "index.html": "/simpleyt/index.html",
-    "main.f91038b4.css.map": "/simpleyt/static/css/main.f91038b4.css.map",
-    "main.17f384f0.js.map": "/simpleyt/static/js/main.17f384f0.js.map"
+    "main.0cf152f9.css.map": "/simpleyt/static/css/main.0cf152f9.css.map",
+    "main.c04d2cff.js.map": "/simpleyt/static/js/main.c04d2cff.js.map"
   },
   "entrypoints": [
-    "static/css/main.f91038b4.css",
-    "static/js/main.17f384f0.js"
+    "static/css/main.0cf152f9.css",
+    "static/js/main.c04d2cff.js"
   ]
 }
