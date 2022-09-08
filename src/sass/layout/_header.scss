@@ -8,13 +8,36 @@
 
   &__logo {
     display: inline-block;
-    background-image: linear-gradient(to right bottom, #f77f00, #d62828);
+    background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     letter-spacing: 2px;
     font-size: 4rem;
     font-weight: 700;
+    animation: changeColor 4s infinite;
+
+    @keyframes changeColor {
+      0% {
+        background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
+      }
+
+      25% {
+        background-image: linear-gradient(to right bottom, #f77f00, #d62828);;
+      }
+      
+      50% {
+        background-image: linear-gradient(to right bottom, #970D1A, #4E204D);;
+      }
+      
+      75% {
+        background-image: linear-gradient(to right bottom, #576182, #1FC5A8);;
+      }
+      
+      100% {
+        background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
+      }
+    }
 
     @include respond(phone) {
       font-size: 3rem;
