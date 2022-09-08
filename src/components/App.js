@@ -69,7 +69,7 @@ class App extends React.Component {
         </main>
         <footer className="footer">
           <div className="row">
-            <p class="footer__copyright">&copy; Build by Cyuan 2022</p>
+            <p className="footer__copyright">&copy; Build by Cyuan 2022</p>
           </div>
         </footer>
       </>
