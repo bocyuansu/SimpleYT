@@ -47,6 +47,9 @@ class App extends React.Component {
             <SearchBar onTermSubmit={this.onTermSubmit} />
           </div>
           <figure className="header__avatar">
+            <a href="/simpleyt" alt="avatar" className="">
+              &nbsp;
+            </a>
             <img src={avatar} alt="avatar" />
           </figure>
         </header>
