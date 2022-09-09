@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simpleyt/static/css/main.0cf152f9.css",
+    "main.css": "/simpleyt/static/css/main.c3f42e83.css",
     "main.js": "/simpleyt/static/js/main.c04d2cff.js",
     "static/media/cyuan.jpeg": "/simpleyt/static/media/cyuan.f1943b5c4e78455804ab.jpeg",
     "static/media/linea-basic-10.svg": "/simpleyt/static/media/linea-basic-10.a5a02e7fc44d05c1fa87.svg",
@@ -8,11 +8,11 @@
     "static/media/linea-basic-10.ttf": "/simpleyt/static/media/linea-basic-10.172006d6a70ece2b1a0c.ttf",
     "static/media/linea-basic-10.woff": "/simpleyt/static/media/linea-basic-10.5665793dc15cc2dca6db.woff",
     "index.html": "/simpleyt/index.html",
-    "main.0cf152f9.css.map": "/simpleyt/static/css/main.0cf152f9.css.map",
+    "main.c3f42e83.css.map": "/simpleyt/static/css/main.c3f42e83.css.map",
     "main.c04d2cff.js.map": "/simpleyt/static/js/main.c04d2cff.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cf152f9.css",
+    "static/css/main.c3f42e83.css",
     "static/js/main.c04d2cff.js"
   ]
 }
