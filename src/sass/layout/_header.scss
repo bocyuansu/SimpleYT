@@ -6,6 +6,10 @@
   border-bottom: 1px solid #ccc;
   height: 8rem;
 
+  @include respond(phone) {
+    padding: 1rem 1rem;
+  }
+
   &__logo {
     display: inline-block;
     background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
