@@ -65,6 +65,13 @@
     border: 1px solid #ccc;
     overflow-y: auto;
     max-height: 56.6rem;
+
+    @include respond(tab-land) {
+      padding: 0;
+      border: none;
+      overflow: unset;
+      max-height: none;
+    }
   }
 
   &__item {
