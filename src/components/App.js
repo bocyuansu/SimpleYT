@@ -3,14 +3,15 @@ import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import ComentList from './ComentList';
 
 import avatar from '../img/cyuan.jpeg';
 
 class App extends React.Component {
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], selectedVideo: null, comments: [] };
 
   componentDidMount() {
-    this.onTermSubmit('林俊傑');
+    this.onTermSubmit('justin bieber');
   }
 
   componentDidUpdate() {
@@ -20,6 +21,8 @@ class App extends React.Component {
   onTermSubmit = async (term) => {
     const response = await youtube.get('/search', {
       params: {
+        type: 'video',
+        maxResults: 10,
         q: term,
       },
     });
@@ -28,13 +31,27 @@ class App extends React.Component {
       videos: response.data.items,
       selectedVideo: response.data.items[0],
     });
+
+    this.onCommentsGet(response.data.items[0]);
   };
 
   onVideoSelect = (video) => {
     this.setState({ selectedVideo: video });
+    this.onCommentsGet(video);
+  };
+
+  onCommentsGet = async (video) => {
+    const response = await youtube.get('/commentThreads', {
+      params: {
+        videoId: video.id.videoId,
+      },
+    });
+
+    this.setState({ comments: response.data.items });
   };
 
   render() {
+    console.log(this.state.comments);
     return (
       <>
         <header className="header">
@@ -59,6 +76,7 @@ class App extends React.Component {
             <div className="row video">
               <div className="col-2-of-3">
                 <VideoDetail video={this.state.selectedVideo} />
+                <ComentList comments={this.state.comments} />
               </div>
               <div className="col-1-of-3">
                 <VideoList
