@@ -32,15 +32,15 @@ class App extends React.Component {
       selectedVideo: response.data.items[0],
     });
 
-    this.onCommentsGet(response.data.items[0]);
+    this.fetchVideoComments(response.data.items[0]);
   };
 
   onVideoSelect = (video) => {
     this.setState({ selectedVideo: video });
-    this.onCommentsGet(video);
+    this.fetchVideoComments(video);
   };
 
-  onCommentsGet = async (video) => {
+  fetchVideoComments = async (video) => {
     const response = await youtube.get('/commentThreads', {
       params: {
         videoId: video.id.videoId,
@@ -51,7 +51,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.comments);
     return (
       <>
         <header className="header">
