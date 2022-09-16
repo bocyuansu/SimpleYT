@@ -5,6 +5,11 @@
   padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
   height: 8rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
 
   @include respond(phone) {
     padding: 1rem 1rem;
@@ -12,7 +17,7 @@
 
   &__logo {
     display: inline-block;
-    background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
+    background-image: linear-gradient(to right bottom, #5d69be, #c89feb);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -23,23 +28,23 @@
 
     @keyframes changeColor {
       0% {
-        background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
+        background-image: linear-gradient(to right bottom, #5d69be, #c89feb);
       }
 
       25% {
-        background-image: linear-gradient(to right bottom, #f77f00, #d62828);;
+        background-image: linear-gradient(to right bottom, #f77f00, #d62828);
       }
-      
+
       50% {
-        background-image: linear-gradient(to right bottom, #970D1A, #4E204D);;
+        background-image: linear-gradient(to right bottom, #970d1a, #4e204d);
       }
-      
+
       75% {
-        background-image: linear-gradient(to right bottom, #576182, #1FC5A8);;
+        background-image: linear-gradient(to right bottom, #576182, #1fc5a8);
       }
-      
+
       100% {
-        background-image: linear-gradient(to right bottom, #5D69BE, #C89FEB);;
+        background-image: linear-gradient(to right bottom, #5d69be, #c89feb);
       }
     }
 
@@ -64,8 +69,8 @@
     position: relative;
     width: 5rem;
     height: 5rem;
-    transition: all .3s;
-  
+    transition: all 0.3s;
+
     a {
       position: absolute;
       display: inline-block;
@@ -74,7 +79,7 @@
       height: 6rem;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
     }
 
@@ -83,13 +88,17 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       width: 6rem;
       height: 6rem;
-      background-image: linear-gradient(45deg,
-      #f09433 0%, #e6683c 25%,
-      #dc2743 50%, #6902be 75%,
-      #bc1888 100%);
+      background-image: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #6902be 75%,
+        #bc1888 100%
+      );
       border-radius: 50%;
       z-index: -1;
     }
@@ -99,12 +108,11 @@
       border-radius: 50%;
       width: 5rem;
       height: 5rem;
-      box-shadow: 0 0 0 0.25rem #FFF;
+      box-shadow: 0 0 0 0.25rem #fff;
     }
 
     &:hover {
       transform: scale(1.1);
     }
   }
-
 }
