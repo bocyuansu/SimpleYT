@@ -29,7 +29,7 @@
     }
   }
 
-  &__commentItem{
+  &__commentItem {
     display: flex;
     padding: 1rem;
 
@@ -61,10 +61,24 @@
   }
 
   &__list {
-    padding: 1rem;
     border: 1px solid #ccc;
     overflow-y: auto;
     max-height: 56.6rem;
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #7f7f7f;
+      border: 1px solid transparent;
+      background-clip: content-box;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #a5a5a5;
+      }
+    }
 
     @include respond(tab-land) {
       padding: 0;
@@ -75,10 +89,10 @@
   }
 
   &__item {
+    padding: 1rem;
     display: flex;
     align-items: flex-start;
     cursor: pointer;
-    margin-bottom: 1rem;
 
     img {
       max-width: 180px;
@@ -88,8 +102,9 @@
       padding: 1rem;
       font-size: 1.2rem;
     }
+    &:hover {
+      background-color: #e5e6e4;
+      box-shadow: 0 2px 4px #606060;
+    }
   }
-  
-
-
 }
